@@ -7,5 +7,12 @@ public class modulocalculadora {
         System.out.println("Seleccione la opcion");
         System.out.println("1. Aritmetica \n2. Calculo de areas \n3. Regla de tres");
         int opc = sc.nextInt();
+        switch (opc){
+            case 1:
+                calculadoraareas();
+        }
+    }
+
+    private static void calculadoraareas() {
     }
 }
