@@ -49,9 +49,16 @@ public class nova {
                     modulojuego.gral();
                     break;
                 case 4:
-                    for (int i = 0; i < 4 ; i++)
+                    int contador = 3;
+                    while (contador > 0)
                     {
-                        System.out.println(i+1);
+                        System.out.println(contador);
+                        try {
+                            Thread.sleep(500);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        contador --;
                     }
                     System.out.println("Hasta aqui llego nuestra aventura, nos vemos pronto!");
                     break;
