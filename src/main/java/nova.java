@@ -49,7 +49,11 @@ public class nova {
                     modulojuego.gral();
                     break;
                 case 4:
-                    System.out.println("Saliendo");
+                    for (int i = 0; i < 4 ; i++)
+                    {
+                        System.out.println(i+1);
+                    }
+                    System.out.println("Hasta aqui llego nuestra aventura, nos vemos pronto!");
                     break;
                 default:
                     System.out.println("Opcion no valida");

@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class moduloejercicios
 {
     static int puntos = 0;
-    static int respuestas;
+    static String respuestas;
     public static void main(String[] args)
     {
         gral();
@@ -12,10 +12,11 @@ public class moduloejercicios
     {
         Scanner sc = new Scanner(System.in);
         int opc;
+
+            System.out.println("Bienvenido a la seccion de ejercicios!!");
         do
         {
-            System.out.println("Bienvenido a la seccion de ejercicios!!");
-            System.out.println("Seleccione la opcion");
+            System.out.println("Selecciona la opcion que desees");
             System.out.println("1. Aritmetica \n2. Calculo de areas \n3. Regla de tres \n4. Volver");
             opc = sc.nextInt();
             switch (opc)
@@ -59,23 +60,23 @@ public class moduloejercicios
         sc.nextLine();
         System.out.println("Ejercicio 1:");
         System.out.println("Cuanto es 5 elevado a la 3");
-        respuestas= sc.nextInt();
-        if (respuestas == 25)
+        respuestas= sc.nextLine();
+        if (respuestas.equals("125"))
         {
             System.out.println("Correcto \n+5 Novashots");
             puntos = puntos + 5;
         }
         else
         {
-            System.out.println("Respuesta incorrecta, la respuesta es: 15");
+            System.out.println("Respuesta incorrecta, la respuesta es: 125");
         }
 
         System.out.println("Presiona ENTER para ir al siguiente ejercicio");
         sc.nextLine();
         System.out.println("Ejercicio 2:");
         System.out.println("En un triángulo rectángulo, si un cateto mide 9 cm y el otro cateto mide 12 cm, ¿cuál es la hipotenusa?");
-        respuestas = sc.nextInt();
-        if (respuestas == 15)
+        respuestas = sc.nextLine();
+        if (respuestas.equals("15"))
         {
             System.out.println("Correcto \n+5 Novashots");
             puntos = puntos + 5;
@@ -84,6 +85,10 @@ public class moduloejercicios
         {
             System.out.println("Respuesta incorrecta, la respuesta es: 15");
         }
+        System.out.println("Muy bien has sumado un total de " + puntos + " Novashots");
+        System.out.println("Presiona ENTER para volver al menu de ejercicios");
+        sc.nextLine();
+
 
     }
 }

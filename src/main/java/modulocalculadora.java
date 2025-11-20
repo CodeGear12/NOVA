@@ -15,7 +15,7 @@ public class modulocalculadora {
         System.out.println("⋙⋙⋙⋙⋙¡¡Bienvenido a la seccion de calculadora!!⋘⋘⋘⋘⋘");
         do{
             System.out.println("Seleccione la operación que desea realizar");
-            System.out.println("1. Aritmetica \n2. Calculo de areas \n3. Regla de tres");
+            System.out.println("1. Aritmetica \n2. Calculo de areas \n3. Regla de tres \n4. Volver");
 
             eleccion = teclado.nextInt();
 
@@ -30,10 +30,12 @@ public class modulocalculadora {
                 case 3:
                     reglaDeTres();
                     break;
+                case 4:
+                    nova.general();
                 default:
                     System.out.println("Selecciona una opción valida");
             }
-        } while (eleccion != 3);
+        } while (eleccion != 4);
 
     }
 
