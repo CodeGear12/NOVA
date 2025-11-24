@@ -83,6 +83,16 @@ public class modulocalculadora {
         System.out.println("=============================");
         System.out.println("Bienvenid@ a la sección resta");
         System.out.println("=============================");
+
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Ingresa la cantidad de numeros a restar");
+        int cantResta= teclado.nextInt();
+
+        System.out.println("Ingrese los numeros a restar");
+        Scanner teclado2=new Scanner(System.in);
+        int n = teclado2.nextInt();
+
+
     }
     private static void suma() {
         System.out.println("=============================");
