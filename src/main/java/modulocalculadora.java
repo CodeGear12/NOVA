@@ -75,8 +75,22 @@ public class modulocalculadora {
         Scanner teclado2 = new Scanner(System.in);
         int eleccionAri = 0;
         do {
-            System.out.println("Bienvenid@ a operaciones aritmeticas");
-            System.out.println("1.Suma \n2.Resta \n3.Multiplicación \n4.División");
+            System.out.println(ANSI_CYAN +
+                    "                                   ╔═════════════════════════════════════════════════╗\n" +
+                    "                                   ║      BIENVENIDO A OPERACIONES ARITMÉTICAS       ║\n" +
+                    "                                   ╠═════════════════════════════════════════════════╣" + ANSI_RESET);
+
+            System.out.println(ANSI_PURPLE +
+                    "                                   ║  1) Suma                                        ║\n" +
+                    "                                   ║  2) Resta                                       ║\n" +
+                    "                                   ║  3) Multipicación                               ║\n" +
+                    "                                   ║  4) División                                    ║\n"+
+                    ANSI_RESET);
+            System.out.println(ANSI_YELLOW +
+                    "                                   ╚════════════════════════════════════════════════╝" +
+                    ANSI_RESET);
+
+            System.out.print(ANSI_RESET + " Elija la operación que desea realizar " + ANSI_RESET);
             eleccionAri = teclado2.nextInt();
             switch (eleccionAri) {
                 case 1:
@@ -113,7 +127,7 @@ public class modulocalculadora {
             System.out.println("Ingresa un número");
         double multiplicacion;
         String opcion = "s";
-        // Ciclo que suma muchos númerosssssssssssss
+        // Ciclo que multiplica muchos númerosssssssssssss
         while (opcion.equalsIgnoreCase("s"))
         {
             System.out.print("Ingresa un número: ");
