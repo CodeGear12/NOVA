@@ -245,40 +245,74 @@ public class modulocalculadora {
     }
 
     private static void circulo() {
-        System.out.println("=============================");
-        System.out.println("Bienvenid@ a la sección círculo");
-        System.out.println("=============================");
+        System.out.println("●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●");
+        System.out.println(
+                "                            Bienvenid@ a la sección NOVA circulo                          \n"+
+                        "                   En esta sección podras calcular el área de un circulo                    ");
+        System.out.println("●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●○●");
+        System.out.println("\n" +
+                "                             Formula del área de un circulo                                         ");
+        System.out.println("                                  A = π·r²                                                     ");
+
+        String repetir = "s";
+        do {
+            Scanner teclado = new Scanner(System.in);
+            double radio, area, radioCua;
+            double PI = 3.1416;
+
+
+            System.out.print(ANSI_RESET + " Radio: " + ANSI_RESET);
+            radio = teclado.nextDouble();
+            radioCua = radio * radio;
+            area = PI * radioCua;
+            System.out.println("Area de circulo = " + area);
+
+
+            System.out.print("¿Quieres repetir el calculo del área? (s/n): ");
+            repetir = teclado.next();
+
+        } while (repetir.equalsIgnoreCase("s"));
+
     }
 
     private static void cuadrado() {
-        System.out.println("=============================");
-        System.out.println("Bienvenid@ a la sección cuadrado");
-        System.out.println("=============================");
+        System.out.println("▨▨▨▨▣▣▣▣▨▨▨▨▣▣▣▣▨▨▨▨▣▣▣▣▨▨▨▨▣▣▣▣▨▨▨▨▣▣▣▣▨▨▨▨▣▣▣▣▨▨▨▨▣▣▣▣▨▨▨▨▣▣▣▣▨▨");
+        System.out.println(
+                "                            Bienvenid@ a la sección NOVA cuadrado                          \n"+
+                        "                   En esta sección podras calcular el área de un cuadrado                    ");
+        System.out.println("▨▨▨▨▣▣▣▣▨▨▨▨▣▣▣▣▨▨▨▨▣▣▣▣▨▨▨▨▣▣▣▣▨▨▨▨▣▣▣▣▨▨▨▨▣▣▣▣▨▨▨▨▣▣▣▣▨▨▨▨▣▣▣▣▨▨");
     }
 
     private static void rombo() {
-        System.out.println("=============================");
-        System.out.println("Bienvenid@ a la sección rombo");
-        System.out.println("Hola mundo");
-        System.out.println("=============================");
+        System.out.println("◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈");
+        System.out.println(
+                "                            Bienvenid@ a la sección NOVA rombo                          \n"+
+                        "                   En esta sección podras calcular el área de un rombo                    ");
+        System.out.println("◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈◆◇◈");
     }
 
     private static void trapecio() {
-        System.out.println("=============================");
-        System.out.println("Bienvenid@ a la sección trapecio");
-        System.out.println("=============================");
+        System.out.println("◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩");
+        System.out.println(
+                "                            Bienvenid@ a la sección NOVA trapecio                          \n"+
+                "                   En esta sección podras calcular el área de un trapecio                    ");
+        System.out.println("◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩◩");
     }
 
     private static void rectangulo() {
-        System.out.println("=============================");
-        System.out.println("Bienvenid@ a la sección rectángulo");
-        System.out.println("=============================");
+        System.out.println("▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬");
+        System.out.println(
+                "                            Bienvenid@ a la sección NOVA rectángulo                          \n"+
+                "                   En esta sección podras calcular el área de un rectangulo                    ");
+        System.out.println("▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬");
     }
 
     private static void triangulo() {
-        System.out.println("=============================");
-        System.out.println("Bienvenid@ a la sección triángulo");
-        System.out.println("=============================");
+        System.out.println("▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽");
+        System.out.println(
+                "                            Bienvenid@ a la sección NOVA triangulo                          \n"+
+                        "                   En esta sección podras calcular el área de un triangulo                    ");
+        System.out.println("▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽▲▽");
     }
 
     private static void reglaDeTres() {
