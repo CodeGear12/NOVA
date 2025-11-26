@@ -3,14 +3,11 @@ import java.util.Scanner;
 public class moduloejercicios
 {
     public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
     static int puntos = 0;
-    static String respuestas;
+    static int ejercicioactual = 0;
     public static void main(String[] args)
     {
         gral();
@@ -69,6 +66,44 @@ public class moduloejercicios
         while (opc !=4);
     }
 
+    private static void aritmetica() {
+        Scanner sc = new Scanner(System.in);
+        String []problemas=
+                {
+                        "¿Cuánto es 5 elevado a la 3?",
+                        "En un triángulo rectángulo, si un cateto mide 9 cm y el otro 12 cm, ¿cuál es la hipotenusa?",
+                };
+        String []respuestascorrectas = {"125","15"};
+        String []explicaciones = {
+                "Tienes que multiplicar el numero por si mismo la cantidad de veces que indica el exponente\nEn este caso\n5x5x5=125",
+                "Tenemos que usar el teorema de pitagoras\nc²=a²+b²\nSustituimos los valores en la formula:\nc²=9²+12²\nSacamos raiz de ambos lados para eliminar el cuadrado en c²\nc=√9²+12²\nAl resolver la raiz nos dara el resultado correcto"
+        };
+        for (int i = ejercicioactual; i < problemas.length ; i++){
+            boolean respondido = false;
+            while (!respondido) {
+                System.out.println("Ejercicio " + (i + 1) + ":");
+                System.out.println(problemas[i]);
+                String respuesta = sc.nextLine();
+                if (respuesta.equalsIgnoreCase("calc")) {
+                    modulocalculadora.gral();
+                    System.out.println("Regresando al ejercicio.");
+                    continue;
+                }
+                if (respuesta.equalsIgnoreCase(respuestascorrectas[i])) {
+                    System.out.println("Correcto +5 Novashots");
+                    puntos = puntos + 5;
+                } else {
+                    System.out.println("Incorrecto, la respuesta correcta es: " + respuestascorrectas[i]);
+                    System.out.println("Explicacion: " + explicaciones[i]);
+                }
+                respondido = true;
+            }
+            ejercicioactual = i + 1;
+            System.out.println("Presiona ENTER para ir al siguiente ejercicio");
+            sc.nextLine();
+        }
+    }
+
     private static void regladetres()
     {
 
@@ -78,46 +113,5 @@ public class moduloejercicios
     {
 
     }
-
-    private static void aritmetica()
-    {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Bienvenido a la seccion de ejercicios de aritmetica");
-        System.out.println("Por cada respuesta correcta se añadiran 5 novashots con los cuales podras seguir jugando");
-        System.out.println("Comenzemos con ejercicios basicos (La dificultad ira aunmentando)");
-        System.out.println("Presiona ENTER cuando estes listo");
-        sc.nextLine();
-        System.out.println("Ejercicio 1:");
-        System.out.println("Cuanto es 5 elevado a la 3");
-        respuestas= sc.nextLine();
-        if (respuestas.equals("125"))
-        {
-            System.out.println("Correcto \n+5 Novashots");
-            puntos = puntos + 5;
-        }
-        else
-        {
-            System.out.println("Respuesta incorrecta, la respuesta es: 125");
-        }
-
-        System.out.println("Presiona ENTER para ir al siguiente ejercicio");
-        sc.nextLine();
-        System.out.println("Ejercicio 2:");
-        System.out.println("En un triángulo rectángulo, si un cateto mide 9 cm y el otro cateto mide 12 cm, ¿cuál es la hipotenusa?");
-        respuestas = sc.nextLine();
-        if (respuestas.equals("15"))
-        {
-            System.out.println("Correcto \n+5 Novashots");
-            puntos = puntos + 5;
-        }
-        else
-        {
-            System.out.println("Respuesta incorrecta, la respuesta es: 15");
-        }
-        System.out.println("Muy bien has sumado un total de " + puntos + " Novashots");
-        System.out.println("Presiona ENTER para volver al menu de ejercicios");
-        sc.nextLine();
-
-
-    }
+    
 }
