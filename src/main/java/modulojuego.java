@@ -47,7 +47,6 @@ class Juego
                 System.out.println("                                                    Tienes " + balasDisponibles + " novashots y hay " + cantidadEnemigos + " naves enemigas.  ");
                 System.out.println("                                                    ¿Desea comenzar el juego? (1 = si, 2 = no):                           ");
 
-
                 String opcion = entrada.nextLine().trim();
 
                 if (!opcion.equals("1")) {
