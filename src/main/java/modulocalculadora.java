@@ -119,7 +119,32 @@ public class modulocalculadora {
                 "                          Bienvenid@ a la sección NOVA división                        \n"+
                         "                En esta sección podras dividir números enteros y decimales                 ");
         System.out.println("⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝⨝");
+        Scanner teclado = new Scanner(System.in);
+        String repetir = "s";
 
+        do {
+            System.out.print("Ingresa un número inicial para comenzar la división: ");
+            double division = teclado.nextDouble(); // Inicializa 'division' con el primer número
+            String opcion = "s";
+
+            // Ciclo que divide muchos números
+            while (opcion.equalsIgnoreCase("s")) {
+                System.out.print("Ingresa un número a dividir: ");
+                double num = teclado.nextDouble();
+                if (num != 0) {
+                    division = division / num;
+                } else {
+                    System.out.println("No se puede dividir por cero. Intenta nuevamente.");
+                }
+                System.out.print("¿Quieres dividir otro número? (s/n): ");
+                opcion = teclado.next();
+            }
+            System.out.println("El resultado de la división es: " + division);
+
+            System.out.print("¿Quieres repetir la sección de división? (s/n): ");
+            repetir = teclado.next();
+
+        } while (repetir.equalsIgnoreCase("s"));
     }
 
     private static void multiplicacion()
@@ -129,21 +154,28 @@ public class modulocalculadora {
                     "                          Bienvenid@ a la sección NOVA multiplicación                        \n"+
                     "                En esta sección podras multiplicar números enteros y decimales                 ");
             System.out.println("◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈");
-            Scanner teclado = new Scanner(System.in);
-            System.out.println("Ingresa un número");
-        double multiplicacion;
-        String opcion = "s";
-        // Ciclo que multiplica muchos númerosssssssssssss
-        while (opcion.equalsIgnoreCase("s"))
-        {
-            System.out.print("Ingresa un número: ");
-            double num = teclado.nextDouble();
-            System.out.print("Ingresa otro número: ");
-            double num2 = teclado.nextDouble();
-            multiplicacion = num2 * num;
-            System.out.print("¿Quieres agregar otro número? (s/n): ");
-            opcion = teclado.next();
-        }
+        Scanner teclado = new Scanner(System.in);
+        String repetir = "s";
+
+        do {
+            System.out.print("Ingresa un número inicial para comenzar la multiplicación: ");
+            double multiplicacion = teclado.nextDouble();
+            String opcion = "s";
+
+            // Ciclo que multiplica muchos númerosssssssss
+            while (opcion.equalsIgnoreCase("s")) {
+                System.out.print("Ingresa un número a multiplicar: ");
+                double num = teclado.nextDouble();
+                multiplicacion = multiplicacion * num;
+                System.out.print("¿Quieres multiplicar otro número? (s/n): ");
+                opcion = teclado.next();
+            }
+            System.out.println("El resultado de la multiplicación es: " + multiplicacion);
+
+            System.out.print("¿Quieres repetir la sección de multiplicación? (s/n): ");
+            repetir = teclado.next();
+
+        } while (repetir.equalsIgnoreCase("s"));
     }
 
     private static void resta() {
@@ -152,29 +184,27 @@ public class modulocalculadora {
                 "                          Bienvenid@ a la sección NOVA resta                                    \n" +
                         "                  En esta sección podras restar números enteros y decimales                       ");
         System.out.println("※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※");
+                Scanner teclado = new Scanner(System.in);
+                String repetir = "s";
+                do
+                {
+                    System.out.print("Ingresa un número inicial para comenzar la resta: ");
+                    double resta = teclado.nextDouble();
+                    String opcion = "s";
+                    // Ciclo que resta muchos númerossssss
+                    while (opcion.equalsIgnoreCase("s"))
+                    {
+                        System.out.print("Ingresa un número a restar: ");
+                        double num = teclado.nextDouble();
+                        resta = resta - num;
+                        System.out.print("¿Quieres restar otro número? (s/n): ");
+                        opcion = teclado.next();
+                    }
+                    System.out.println("El resultado de la resta es: " + resta);
 
-        Scanner teclado = new Scanner(System.in);
-        String repetir = "s";
-
-        do {
-            double resta = 0;
-            String opcion = "s";
-
-            // Ciclo que resta muchos números
-            while (opcion.equalsIgnoreCase("s")) {
-                System.out.print("Ingresa un número: ");
-                double num = teclado.nextDouble();
-                resta = resta - num;
-                System.out.print("¿Quieres agregar otro número? (s/n): ");
-                opcion = teclado.next();
-            }
-            System.out.println("El resultado es: " + resta);
-
-            System.out.print("¿Quieres repetir la sección de suma? (s/n): ");
-            repetir = teclado.next();
-
-        } while (repetir.equalsIgnoreCase("s"));
-
+                    System.out.print("¿Quieres repetir la sección de resta? (s/n): ");
+                    repetir = teclado.next();
+                } while (repetir.equalsIgnoreCase("s"));
     }
     private static void suma() {
         Scanner teclado = new Scanner(System.in);
