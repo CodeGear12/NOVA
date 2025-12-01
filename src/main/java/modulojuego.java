@@ -64,7 +64,7 @@ public class modulojuego {
                         break label;
                     case "2":
                         System.out.println("                                                                  Regresando...");
-                        entrada.close();
+                        nova.general();
                         return;
                     case "3":
                         elegirColor(entrada);
