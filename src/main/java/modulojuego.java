@@ -56,40 +56,41 @@ public class modulojuego {
             System.out.println("                    ∷                        Tienes " + balasDisponibles + " novashots y hay " + cantidadEnemigos + " naves enemigas.       ∷ ");
             System.out.println("                    ∷                  ¿Desea comenzar el juego? (1 = si, 2 = no, 3 = elegir color de tu nave):                                                    ∷ ");
             System.out.println("                    ∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷");
+            label:
             while (true) {
                 String opcion = entrada.nextLine().trim();
-                if (opcion.equals("1"))
-                {
-                    break;
-                } else if (opcion.equals("2"))
-                {
-                    System.out.println("                                                                  Regresando...");
-                    entrada.close();
-                    return;
-                } else if (opcion.equals("3")) {
-                    elegirColor(entrada);
+                switch (opcion) {
+                    case "1":
+                        break label;
+                    case "2":
+                        System.out.println("                                                                  Regresando...");
+                        entrada.close();
+                        return;
+                    case "3":
+                        elegirColor(entrada);
 
-                    System.out.println("           ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●");
-                    System.out.println("                    ∭∭∭∭∭       ∭∭∭              ∭∭∭∭∭∭               ∭∭∭             ∭∭∭                ∭∭∭∭∭∭         ");
-                    System.out.println("                    ∭∭∭∭∭∭     ∭∭∭           ∭∭∭       ∭∭∭            ∭∭∭           ∭∭∭                ∭∭∭  ∭∭∭         ");
-                    System.out.println("                    ∭∭∭ ∭∭∭    ∭∭∭         ∭∭∭           ∭∭∭           ∭∭∭         ∭∭∭                ∭∭∭    ∭∭∭        ");
-                    System.out.println("                    ∭∭∭  ∭∭∭   ∭∭∭         ∭∭∭           ∭∭∭            ∭∭∭       ∭∭∭                ∭∭∭      ∭∭∭       ");
-                    System.out.println("                    ∭∭∭   ∭∭∭  ∭∭∭         ∭∭∭           ∭∭∭             ∭∭∭     ∭∭∭                ∭∭∭∭∭∭∭∭∭∭∭     ");
-                    System.out.println("                    ∭∭∭    ∭∭∭ ∭∭∭         ∭∭∭           ∭∭∭              ∭∭∭   ∭∭∭                ∭∭∭           ∭∭∭     ");
-                    System.out.println("                    ∭∭∭     ∭∭∭∭∭∭           ∭∭∭       ∭∭∭                 ∭∭∭ ∭∭∭                ∭∭∭             ∭∭∭    ");
-                    System.out.println("                    ∭∭∭       ∭∭∭∭∭              ∭∭∭∭∭∭                      ∭∭∭∭∭                 ∭∭∭              ∭∭∭  ");
-                    System.out.println("            ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●");
-                    System.out.println("\n");
-                    System.out.println("                    ∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷");
-                    System.out.println("                    ∷                                             Gran trabajo!!                                                                   ∷");
-                    System.out.println("                    ∷       Bienvenido NOVA    ⋙    Entra a la órbita de juego y disfruta    ⋙    Estas list@!                                    ∷");
-                    System.out.println("                    ∷                                                                                                                               ∷\n");
-                    System.out.println("                    ∷                            Tienes " + balasDisponibles + " novashots y hay " + cantidadEnemigos + " naves enemigas.       ∷ ");
-                    System.out.println("                    ∷                       ¿Desea comenzar el juego? (1 = si, 2 = no, 3 = elegir color de tu nave):                                                    ∷ ");
-                    System.out.println("                    ∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷");
-                    continue;
-                } else {
-                    System.out.println("                                                Opcion no valida. Escribe 1 para jugar o 2 para salir                  ");
+                        System.out.println("           ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●");
+                        System.out.println("                    ∭∭∭∭∭       ∭∭∭              ∭∭∭∭∭∭               ∭∭∭             ∭∭∭                ∭∭∭∭∭∭         ");
+                        System.out.println("                    ∭∭∭∭∭∭     ∭∭∭           ∭∭∭       ∭∭∭            ∭∭∭           ∭∭∭                ∭∭∭  ∭∭∭         ");
+                        System.out.println("                    ∭∭∭ ∭∭∭    ∭∭∭         ∭∭∭           ∭∭∭           ∭∭∭         ∭∭∭                ∭∭∭    ∭∭∭        ");
+                        System.out.println("                    ∭∭∭  ∭∭∭   ∭∭∭         ∭∭∭           ∭∭∭            ∭∭∭       ∭∭∭                ∭∭∭      ∭∭∭       ");
+                        System.out.println("                    ∭∭∭   ∭∭∭  ∭∭∭         ∭∭∭           ∭∭∭             ∭∭∭     ∭∭∭                ∭∭∭∭∭∭∭∭∭∭∭     ");
+                        System.out.println("                    ∭∭∭    ∭∭∭ ∭∭∭         ∭∭∭           ∭∭∭              ∭∭∭   ∭∭∭                ∭∭∭           ∭∭∭     ");
+                        System.out.println("                    ∭∭∭     ∭∭∭∭∭∭           ∭∭∭       ∭∭∭                 ∭∭∭ ∭∭∭                ∭∭∭             ∭∭∭    ");
+                        System.out.println("                    ∭∭∭       ∭∭∭∭∭              ∭∭∭∭∭∭                      ∭∭∭∭∭                 ∭∭∭              ∭∭∭  ");
+                        System.out.println("            ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●");
+                        System.out.println("\n");
+                        System.out.println("                    ∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷");
+                        System.out.println("                    ∷                                             Gran trabajo!!                                                                   ∷");
+                        System.out.println("                    ∷       Bienvenido NOVA    ⋙    Entra a la órbita de juego y disfruta    ⋙    Estas list@!                                    ∷");
+                        System.out.println("                    ∷                                                                                                                               ∷\n");
+                        System.out.println("                    ∷                            Tienes " + balasDisponibles + " novashots y hay " + cantidadEnemigos + " naves enemigas.       ∷ ");
+                        System.out.println("                    ∷                       ¿Desea comenzar el juego? (1 = si, 2 = no, 3 = elegir color de tu nave):                                                    ∷ ");
+                        System.out.println("                    ∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷");
+                        continue;
+                    default:
+                        System.out.println("                                                Opcion no valida. Escribe 1 para jugar o 2 para salir                  ");
+                        break;
                 }
             }
 
@@ -116,14 +117,10 @@ public class modulojuego {
                 int c = azar.nextInt(ANCHO);
                 if (!columnaUsada[c]) {
                     columnaUsada[c] = true;
-                    if (placed < MAX_ENEMIGOS) {
-                        enemigos[placed][0] = 0;
-                        enemigos[placed][1] = c;
-                        enemigoActivo[placed] = true;
-                        placed++;
-                    } else {
-                        break;
-                    }
+                    enemigos[placed][0] = 0;
+                    enemigos[placed][1] = c;
+                    enemigoActivo[placed] = true;
+                    placed++;
                 }
             }
 
@@ -138,6 +135,7 @@ public class modulojuego {
             boolean ganar = false;
             int turno = 0;
 
+            label:
             while (!juegoTerminado) {
                 turno++;
 
@@ -201,38 +199,43 @@ public class modulojuego {
 
                 String comando = entrada.nextLine().trim().toLowerCase();
 
-                if (comando.equals("q")) {
-                    System.out.println("                                                    Has salido del juego. Vuelve pronto te esperamos para regresar a la aventura!!");
-                    break;
-                } else if (comando.equals("a")) {
-                    if (X > 0) X--;
-                } else if (comando.equals("d")) {
-                    if (X < ANCHO - 1) X++;
-                } else if (comando.equals("s")) {
-                    if (balasDisponibles > 0) {
-                        balasDisponibles--;
-                        intentos++;
+                switch (comando) {
+                    case "q":
+                        System.out.println("                                                    Has salido del juego. Vuelve pronto te esperamos para regresar a la aventura!!");
+                        break label;
+                    case "a":
+                        if (X > 0) X--;
+                        break;
+                    case "d":
+                        if (X < ANCHO - 1) X++;
+                        break;
+                    case "s":
+                        if (balasDisponibles > 0) {
+                            balasDisponibles--;
+                            intentos++;
 
-                        boolean disparado = false;
-                        for (int i = 0; i < MAX_BALAS; i++) {
-                            if (!balaActiva[i]) {
-                                balaActiva[i] = true;
-                                balas[i][0] = Y - 1;
-                                balas[i][1] = X;
-                                disparado = true;
-                                break;
+                            boolean disparado = false;
+                            for (int i = 0; i < MAX_BALAS; i++) {
+                                if (!balaActiva[i]) {
+                                    balaActiva[i] = true;
+                                    balas[i][0] = Y - 1;
+                                    balas[i][1] = X;
+                                    disparado = true;
+                                    break;
+                                }
                             }
-                        }
-                        if (!disparado) {
-                            System.out.println("                                                              No se pudo disparar");
+                            if (!disparado) {
+                                System.out.println("                                                              No se pudo disparar");
+                            } else {
+                                System.out.println("                                                         Disparaste. Balas restantes: " + balasDisponibles);
+                            }
                         } else {
-                            System.out.println("                                                         Disparaste. Balas restantes: " + balasDisponibles);
+                            System.out.println("                                                             No tienes novashots restantes.");
                         }
-                    } else {
-                        System.out.println("                                                             No tienes novashots restantes.");
-                    }
-                } else {
-                    System.out.println("                                                                       Comando inválido.");
+                        break;
+                    default:
+                        System.out.println("                                                                       Comando inválido.");
+                        break;
                 }
                 for (int i = 0; i < MAX_BALAS; i++) {
                     if (!balaActiva[i]) continue;
@@ -269,7 +272,7 @@ public class modulojuego {
 
                 for (int i = 0; i < MAX_ENEMIGOS; i++) {
                     if (enemigoActivo[i]) {
-                        enemigos[i][0]++; // bajan
+                        enemigos[i][0]++;
                     }
                 }
 
@@ -349,13 +352,12 @@ public class modulojuego {
             }
             System.out.println("\nTu nave se verá así (vista previa):\n");
             System.out.println(elegido +
-                    "   AAAAA\n" +
-                    "  AA   AA\n" +
-                    " AAAAA AAA\n" +
-                    "AA       AA\n" +
-                    "A         A\n" + ANSI_RESET);
-
-            // confirmar si quiere ese color
+                    "     AAA\n" +
+                    "    AA AA\n" +
+                    "   AA   AA\n" +
+                    "  AAAAAAAAA\n" +
+                    " AA       AA\n" +
+                    "AA         AA\n" + ANSI_RESET);
             System.out.print("¿Deseas usar este color? (1 = sí, 2 = no, 3 = regresar menú): ");
             String conf = entrada.nextLine().trim();
             if (conf.equals("1")) {
