@@ -1,6 +1,10 @@
 import java.util.Scanner;
 public class
 nova {
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
     static String nombre;
     static String usuario;
     static String password;
@@ -11,10 +15,64 @@ nova {
     }
     private static void registro() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Bienvenido (a) a NOVA (Numeros, Operaciones, Velocidad y Aventura");
+        System.out.println(ANSI_BLUE+"                                                                                                                                     \n" +
+                "                                                                                                                                     \n" +
+                "           NNNNNNNN        NNNNNNNN               OOOOOOOOO               VVVVVVVV           VVVVVVVV                         AAA               \n" +
+                "           N:::::::N       N::::::N             OO:::::::::OO             V::::::V           V::::::V                        A:::A              \n" +
+                "           N::::::::N      N::::::N           OO:::::::::::::OO           V::::::V           V::::::V                       A:::::A             \n" +
+                "           N:::::::::N     N::::::N          O:::::::OOO:::::::O          V::::::V           V::::::V                      A:::::::A            \n" +
+                "           N::::::::::N    N::::::N          O::::::O   O::::::O           V:::::V           V:::::V                      A:::::::::A           \n" +
+                "           N:::::::::::N   N::::::N          O:::::O     O:::::O            V:::::V         V:::::V                      A:::::A:::::A          \n" +
+                "           N:::::::N::::N  N::::::N          O:::::O     O:::::O             V:::::V       V:::::V                      A:::::A A:::::A         \n" +
+                "           N::::::N N::::N N::::::N          O:::::O     O:::::O              V:::::V     V:::::V                      A:::::A   A:::::A        \n" +
+                "           N::::::N  N::::N:::::::N          O:::::O     O:::::O               V:::::V   V:::::V                      A:::::A     A:::::A       \n" +
+                "           N::::::N   N:::::::::::N          O:::::O     O:::::O                V:::::V V:::::V                      A:::::AAAAAAAAA:::::A      \n" +
+                "           N::::::N    N::::::::::N          O:::::O     O:::::O                 V:::::V:::::V                      A:::::::::::::::::::::A     \n" +
+                "           N::::::N     N:::::::::N          O::::::O   O::::::O                  V:::::::::V                      A:::::AAAAAAAAAAAAA:::::A    \n" +
+                "           N::::::N      N::::::::N          O:::::::OOO:::::::O                   V:::::::V                      A:::::A             A:::::A   \n" +
+                "           N::::::N       N:::::::N           OO:::::::::::::OO                     V:::::V                      A:::::A               A:::::A  \n" +
+                "           N::::::N        N::::::N             OO:::::::::OO                        V:::V                      A:::::A                 A:::::A \n" +
+                "           NNNNNNNN         NNNNNNN               OOOOOOOOO                           VVV                      AAAAAAA                   AAAAAAA\n" +
+                "                                                                                                                                     "+ANSI_RESET);
+        System.out.println(ANSI_PURPLE);
+        System.out.println(
+                "                ∷              Bienvenido a NOVA    ⋙     Entra a la órbita del juego y disfruta     ⋙    Estas list@!             ∷");
+        System.out.println(
+                "                                   ∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷"+ANSI_RESET);
+
+        System.out.println(
+                "                    Antes de iniciar con la aventura ⋙ Registrate para ser parte de una comunidad que aprende de forma divertida!! ⋙            ");
+
+        System.out.println(ANSI_CYAN +
+                "                                             ╔═════════════════════════════════════════════════╗\n" +
+                "                                             ║                      LOGIN                      ║\n" +
+                "                                             ╠═════════════════════════════════════════════════╣" + ANSI_RESET);
+
+        System.out.println(ANSI_PURPLE+
+                "                                             ║  Nombre:                                        ║\n" +
+                "                                             ║  Edad:                                          ║\n" +
+                "                                             ║  Usuario:                                       ║\n" +
+                "                                             ║  Contraseña:                                    ║"+
+                ANSI_RESET);
+        System.out.println(ANSI_BLUE +
+                "                                             ╚═════════════════════════════════════════════════╝" +
+                ANSI_RESET);
         System.out.println("Ingresa tu nombre:");
         nombre = sc.nextLine();
+        System.out.println(ANSI_CYAN +
+                "                                             ╔═════════════════════════════════════════════════╗\n" +
+                "                                             ║                      LOGIN                      ║\n" +
+                "                                             ╠═════════════════════════════════════════════════╣" + ANSI_RESET);
 
+        System.out.println(ANSI_PURPLE+
+                "                                             ║  Nombre:"+nombre                              +"              ║\n" +
+                "                                             ║  Edad:                                          ║\n" +
+                "                                             ║  Usuario:                                       ║\n" +
+                "                                             ║  Contraseña:                                    ║"+
+                ANSI_RESET);
+        System.out.println(ANSI_BLUE +
+                "                                             ╚═════════════════════════════════════════════════╝" +
+                ANSI_RESET);
         boolean valida = false;
         System.out.println("Ingresa tu edad:");
         while (!valida){
@@ -34,30 +92,96 @@ nova {
                 sc.next();
             }
         }
-
         sc.nextLine();
+        System.out.println(ANSI_CYAN +
+                "                                             ╔═════════════════════════════════════════════════╗\n" +
+                "                                             ║                      LOGIN                      ║\n" +
+                "                                             ╠═════════════════════════════════════════════════╣" + ANSI_RESET);
+
+        System.out.println(ANSI_PURPLE+
+                "                                             ║  Nombre:"+nombre                              +"║\n" +
+                "                                             ║  Edad:"+edad                                 +" ║\n" +
+                "                                             ║  Usuario:                                       ║\n" +
+                "                                             ║  Contraseña:                                    ║"+
+                ANSI_RESET);
+        System.out.println(ANSI_BLUE +
+                "                                             ╚═════════════════════════════════════════════════╝" +
+                ANSI_RESET);
+
         System.out.println("Crea un usuario:");
         usuario = sc.nextLine();
+        System.out.println(ANSI_CYAN +
+                "                                             ╔═════════════════════════════════════════════════╗\n" +
+                "                                             ║                      LOGIN                      ║\n" +
+                "                                             ╠═════════════════════════════════════════════════╣" + ANSI_RESET);
+
+        System.out.println(ANSI_PURPLE+
+                "                                             ║  Nombre:"+nombre                              +"║\n" +
+                "                                             ║  Edad:"+edad                                 +" ║\n" +
+                "                                             ║  Usuario:"+usuario                           +" ║\n" +
+                "                                             ║  Contraseña:                                    ║"+
+                ANSI_RESET);
+        System.out.println(ANSI_BLUE +
+                "                                             ╚═════════════════════════════════════════════════╝" +
+                ANSI_RESET);
+
         System.out.println("Crea una contraseña:");
         password= sc.nextLine();
+        System.out.println(ANSI_CYAN +
+                "                                             ╔═════════════════════════════════════════════════╗\n" +
+                "                                             ║                      LOGIN                      ║\n" +
+                "                                             ╠═════════════════════════════════════════════════╣" + ANSI_RESET);
+
+        System.out.println(ANSI_PURPLE+
+                "                                             ║  Nombre:"+nombre                              +"║\n" +
+                "                                             ║  Edad:"+edad                                 +" ║\n" +
+                "                                             ║  Usuario:"+usuario                           +" ║\n" +
+                "                                             ║  Contraseña:"+password                       +" ║"+
+                ANSI_RESET);
+        System.out.println(ANSI_BLUE +
+                "                                             ╚═════════════════════════════════════════════════╝" +
+                ANSI_RESET);
         System.out.println("Registro exitoso, presiona ENTER para continuar");
         sc.nextLine();
 
 
     }
 
+    private static String getLineBreak() {
+        return "\n";
+    }
+
     public static void general() {
         Scanner sc = new Scanner(System.in);
         int opc = 0;
-
-            System.out.println("==================================");
-            System.out.println("     Bienvenido a tu aventura");
-            System.out.println("==================================");
-            System.out.println("NOVA te ayudara a estudiar y repasar de una manera divertida y sencilla");
-
-            System.out.println("Selecciona la opcion que desees");
         do {
-            System.out.println("1. Ejercicios \n2. Calculadora \n3. Juego \n4. Salir \nPara una mejor experiencia te recomendas la opcion Ejercicios para comenzar con el repaso");
+            System.out.println(ANSI_BLUE+
+                    "                                                        ███    ██  ██████  ██    ██  █████  \n" +
+                    "                                                        ████   ██ ██    ██ ██    ██ ██   ██ \n" +
+                    "                                                        ██ ██  ██ ██    ██ ██    ██ ███████ \n" +
+                    "                                                        ██  ██ ██ ██    ██  ██  ██  ██   ██ \n" +
+                    "                                                        ██   ████  ██████    ████   ██   ██ \n"+ANSI_RESET);
+            System.out.println(ANSI_CYAN+
+                    "                   ███╗   ███╗███████╗███╗   ██╗██╗   ██╗    ██████╗ ██████╗ ██╗███╗   ██╗ ██████╗██╗██████╗  █████╗ ██╗     \n" +
+                    "                   ████╗ ████║██╔════╝████╗  ██║██║   ██║    ██╔══██╗██╔══██╗██║████╗  ██║██╔════╝██║██╔══██╗██╔══██╗██║     \n" +
+                    "                   ██╔████╔██║█████╗  ██╔██╗ ██║██║   ██║    ██████╔╝██████╔╝██║██╔██╗ ██║██║     ██║██████╔╝███████║██║     \n" +
+                    "                   ██║╚██╔╝██║██╔══╝  ██║╚██╗██║██║   ██║    ██╔═══╝ ██╔══██╗██║██║╚██╗██║██║     ██║██╔═══╝ ██╔══██║██║     \n" +
+                    "                   ██║ ╚═╝ ██║███████╗██║ ╚████║╚██████╔╝    ██║     ██║  ██║██║██║ ╚████║╚██████╗██║██║     ██║  ██║███████╗\n" +
+                    "                   ╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝     ╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝╚═╝╚═╝     ╚═╝  ╚═╝╚══════╝\n" +ANSI_RESET);
+            System.out.println(ANSI_CYAN +
+                    "                                             ╔═════════════════════════════════════════════════╗\n" +
+                    "                                             ║         SELECCIONA LA OPCIÓN QUE DESEES         ║\n" +
+                    "                                             ╠═════════════════════════════════════════════════╣" + ANSI_RESET);
+
+            System.out.println(ANSI_PURPLE +
+                    "                                             ║  1) Ejercicios                                  ║\n" +
+                    "                                             ║  2) Calculadora                                 ║\n" +
+                    "                                             ║  3) Juego                                       ║\n" +
+                    "                                             ║  4) Salir                                       ║"+
+                    ANSI_RESET);
+            System.out.println(ANSI_BLUE +
+                    "                                             ╚═════════════════════════════════════════════════╝" +
+                    ANSI_RESET);
             if (sc.hasNextInt()) {
                 opc = sc.nextInt();
                 switch (opc) {
