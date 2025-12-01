@@ -307,6 +307,7 @@ public class modulojuego {
                 } else if (opf.equals("2")) {
                     System.out.println("Regresando al menú principal...");
                     break mainLoop;
+
                 } else {
                     System.out.println("Opción no válida.");
                 }
