@@ -361,16 +361,19 @@ public class modulojuego {
                     "AA         AA\n" + ANSI_RESET);
             System.out.print("¿Deseas usar este color? (1 = sí, 2 = no, 3 = regresar menú): ");
             String conf = entrada.nextLine().trim();
-            if (conf.equals("1")) {
-                colorNave = elegido;
-                System.out.println("Color cambiado con éxito.");
-                return;
-            } else if (conf.equals("2")) {
-                ;
-            } else if (conf.equals("3")) {
-                return;
-            } else {
-                System.out.println("Opción no válida. Regresando al menú de colores.");
+            switch (conf) {
+                case "1" -> {
+                    colorNave = elegido;
+                    System.out.println("Color cambiado con éxito.");
+                    return;
+                }
+                case "2" -> {
+                    ;
+                }
+                case "3" -> {
+                    return;
+                }
+                default -> System.out.println("Opción no válida. Regresando al menú de colores.");
             }
         }
     }
