@@ -81,6 +81,7 @@ public class modulocalculadora {
         Scanner teclado2 = new Scanner(System.in);
         int eleccionAri;
 
+        do {
             System.out.println(ANSI_CYAN +
                     "                                             ╔═════════════════════════════════════════════════╗\n" +
                     "                                             ║      BIENVENIDO A OPERACIONES ARITMÉTICAS       ║\n" +
@@ -98,7 +99,6 @@ public class modulocalculadora {
                     ANSI_RESET);
 
             System.out.print(ANSI_RESET + " Elija la operación que desea realizar " + ANSI_RESET);
-        do {
             if (teclado2.hasNextInt()) {
                 eleccionAri = teclado2.nextInt();
                 switch (eleccionAri) {
@@ -161,7 +161,6 @@ public class modulocalculadora {
 
         } while (repetir.equalsIgnoreCase("s"));
     }
-
     private static void multiplicacion()
     {
             System.out.println("                     ◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈");
@@ -361,6 +360,7 @@ public class modulocalculadora {
             repetir = teclado.next();
 
         } while (repetir.equalsIgnoreCase("s"));
+
 
     }
 
