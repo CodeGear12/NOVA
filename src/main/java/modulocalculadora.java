@@ -140,12 +140,22 @@ public class modulocalculadora {
         do {
             String opcion = "s";
             System.out.print("Ingresa un número inicial para comenzar la división: ");
-            double division = teclado.nextDouble(); 
+            while (!teclado.hasNextDouble()) {
+                System.out.println("Error: debes ingresar un número válido.");
+                teclado.next(); // descarta lo incorrecto
+                System.out.print("Intenta de nuevo: ");
+            }
+            double division = teclado.nextDouble();
 
 
             // Ciclo que divide muchos números
             while (opcion.equalsIgnoreCase("s")) {
                 System.out.print("Ingresa un número a dividir: ");
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next();
+                    System.out.print("Intenta de nuevo: ");
+                }
                 double num = teclado.nextDouble();
                 if (num != 0) {
                     division = division / num;
@@ -171,16 +181,26 @@ public class modulocalculadora {
                                "                                         En esta sección podras multiplicar números enteros y decimales                 ");
             System.out.println("                     ◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈");
         Scanner teclado = new Scanner(System.in);
-        String repetir = "s";
+        String repetir;
 
         do {
             System.out.print("Ingresa un número inicial para comenzar la multiplicación: ");
+            while (!teclado.hasNextDouble()) {
+                System.out.println("Error: debes ingresar un número válido.");
+                teclado.next(); // descarta lo incorrecto
+                System.out.print("Intenta de nuevo: ");
+            }
             double multiplicacion = teclado.nextDouble();
             String opcion = "s";
 
             // Ciclo que multiplica muchos númerosssssssss
             while (opcion.equalsIgnoreCase("s")) {
                 System.out.print("Ingresa un número a multiplicar: ");
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 double num = teclado.nextDouble();
                 multiplicacion = multiplicacion * num;
                 System.out.print("¿Quieres multiplicar otro número? (s/n): ");
@@ -201,16 +221,27 @@ public class modulocalculadora {
                            "                                                En esta sección podras restar números enteros y decimales                       ");
         System.out.println("                           ※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※");
                 Scanner teclado = new Scanner(System.in);
-                String repetir = "s";
+                String repetir;
                 do
                 {
-                    System.out.print("Ingresa un número inicial para comenzar la resta: ");
-                    double resta = teclado.nextDouble();
                     String opcion = "s";
+                    System.out.print("Ingresa un número inicial para comenzar la resta: ");
+                    while (!teclado.hasNextDouble()) {
+                        System.out.println("Error: debes ingresar un número válido.");
+                        teclado.next(); // descarta lo incorrecto
+                        System.out.print("Intenta de nuevo: ");
+                    }
+                    double resta = teclado.nextDouble();
+
                     // Ciclo que resta muchos númerossssss
                     while (opcion.equalsIgnoreCase("s"))
                     {
                         System.out.print("Ingresa un número a restar: ");
+                        while (!teclado.hasNextDouble()) {
+                            System.out.println("Error: debes ingresar un número válido.");
+                            teclado.next(); // descarta lo incorrecto
+                            System.out.print("Intenta de nuevo: ");
+                        }
                         double num = teclado.nextDouble();
                         resta = resta - num;
                         System.out.print("¿Quieres restar otro número? (s/n): ");
@@ -231,7 +262,7 @@ public class modulocalculadora {
                            "                                                 En esta sección podrás sumar números enteros y decimales               ");
         System.out.println("                           ##################################################################################################");
 
-        String repetir = "s";
+        String repetir;
 
         do {
             double suma = 0;
@@ -240,6 +271,11 @@ public class modulocalculadora {
             // Ciclo que suma muchos números
             while (opcion.equalsIgnoreCase("s")) {
                 System.out.print("Ingresa un número: ");
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 double num = teclado.nextDouble();
                 suma = suma + num;
                 System.out.print("¿Quieres agregar otro número? (s/n): ");
@@ -344,10 +380,13 @@ public class modulocalculadora {
             Scanner teclado = new Scanner(System.in);
             double radio, area, radioCua;
             double PI = 3.1416;
-
-
             do {
                 System.out.print(ANSI_RESET + " Radio: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 radio = teclado.nextDouble();
                 if (radio<= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -388,13 +427,18 @@ public class modulocalculadora {
         System.out.println(ANSI_CYAN+
                 "                                                                     A = L·L                                                     "+ANSI_RESET);
 
-        String repetir = "s";
+        String repetir;
         do {
             Scanner teclado = new Scanner(System.in);
             double lado, area;
 
             do {
                 System.out.print(ANSI_RESET + " Longitud de un lado: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 lado = teclado.nextDouble();
                 if (lado<= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -433,13 +477,18 @@ public class modulocalculadora {
         System.out.println(ANSI_CYAN+
                 "                                                                  A = (D·d)/2                                                     "+ANSI_RESET);
 
-        String repetir = "s";
+        String repetir;
         do {
             Scanner teclado = new Scanner(System.in);
             double dMayor, dMenor,multi, area;
 
             do {
                 System.out.print(ANSI_RESET + " Diagonal mayor: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 dMayor = teclado.nextDouble();
                 if (dMayor<= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -448,6 +497,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " Diagonal menor: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 dMenor = teclado.nextDouble();
                 if (dMenor<= 0 || dMenor>dMayor) {
                     System.out.println("Ingrese un valor menor a la diagonal mayor");
@@ -494,6 +548,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " Base mayor: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 bMayor = teclado.nextDouble();
                 if (bMayor<= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -502,6 +561,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " Base menor: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 bMenor = teclado.nextDouble();
                 if (bMenor<= 0 || bMenor>bMayor) {
                     System.out.println("La base menor no puede ser mayor a la base mayor");
@@ -510,6 +574,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " Altura: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 alt = teclado.nextDouble();
                 if (alt<= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -556,6 +625,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " Base: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 base = teclado.nextDouble();
                 if (base<= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -564,6 +638,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " Altura: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 alt = teclado.nextDouble();
                 if (alt<= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -611,6 +690,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " Base: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 base = teclado.nextDouble();
                 if (base<= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -619,6 +703,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " Altura: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 alt = teclado.nextDouble();
                 if (alt<= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -699,6 +788,11 @@ public class modulocalculadora {
         System.out.println("Ingresa tu edad:");
             do {
                 System.out.print(ANSI_RESET + " A: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 A = teclado.nextDouble();
                 if (A <= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -707,6 +801,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " B: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 B = teclado.nextDouble();
                 if (B <= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -716,6 +815,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " C: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 C = teclado.nextDouble();
                 if (C <= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -736,6 +840,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " A: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 A = teclado.nextDouble();
                 if (A <= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -744,6 +853,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " B: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 B = teclado.nextDouble();
                 if (B <= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -753,6 +867,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " D: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 D = teclado.nextDouble();
                 if (D <= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -773,6 +892,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " A: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 A = teclado.nextDouble();
                 if (A <= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -781,6 +905,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " C: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 C = teclado.nextDouble();
                 if (C <= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -789,6 +918,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " D: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 D = teclado.nextDouble();
                 if (D <= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -810,6 +944,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " B: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 B = teclado.nextDouble();
                 if (B <= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -818,6 +957,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " C: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 C = teclado.nextDouble();
                 if (C <= 0) {
                     System.out.println("Ingresa un numero valido");
@@ -826,6 +970,11 @@ public class modulocalculadora {
 
             do {
                 System.out.print(ANSI_RESET + " D: " + ANSI_RESET);
+                while (!teclado.hasNextDouble()) {
+                    System.out.println("Error: debes ingresar un número válido.");
+                    teclado.next(); // descarta lo incorrecto
+                    System.out.print("Intenta de nuevo: ");
+                }
                 D = teclado.nextDouble();
                 if (D <= 0) {
                     System.out.println("Ingresa un numero valido");
