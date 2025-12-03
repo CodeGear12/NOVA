@@ -895,7 +895,6 @@ public class modulocalculadora {
             double A, B, C, D, multi;
 
 
-        System.out.println("Ingresa tu edad:");
             do {
                 System.out.print(ANSI_RESET + " A: " + ANSI_RESET);
                 while (!teclado.hasNextDouble()) {
