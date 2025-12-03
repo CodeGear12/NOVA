@@ -503,10 +503,10 @@ public class modulocalculadora {
                     System.out.print("Intenta de nuevo: ");
                 }
                 dMenor = teclado.nextDouble();
-                if (dMenor<= 0 || dMenor>dMayor) {
+                if (dMenor<= 0 || dMenor>=dMayor) {
                     System.out.println("Ingrese un valor menor a la diagonal mayor");
                 }
-            }while (dMenor<=0 || dMenor>dMayor);
+            }while (dMenor<=0 || dMenor>=dMayor);
             multi = dMayor * dMenor;
             area = multi/2;
             System.out.println(ANSI_PURPLE+"Area del rombo ="+area+ANSI_RESET);
@@ -567,7 +567,7 @@ public class modulocalculadora {
                     System.out.print("Intenta de nuevo: ");
                 }
                 bMenor = teclado.nextDouble();
-                if (bMenor<= 0 || bMenor>bMayor) {
+                if (bMenor<= 0 || bMenor>=bMayor) {
                     System.out.println("La base menor no puede ser mayor a la base mayor");
                 }
             }while (bMenor<=0 || bMenor>bMayor);
