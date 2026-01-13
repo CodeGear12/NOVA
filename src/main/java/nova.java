@@ -58,6 +58,8 @@ nova {
                 "                                             ╚═════════════════════════════════════════════════╝" +
                 ANSI_RESET);
         System.out.println("Ingresa tu nombre:");
+
+
         nombre = sc.nextLine();
         System.out.println(ANSI_CYAN +
                 "                                             ╔═════════════════════════════════════════════════╗\n" +
