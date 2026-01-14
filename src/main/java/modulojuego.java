@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.*;
 public class modulojuego {
     //modulo juego
@@ -154,6 +155,20 @@ public class modulojuego {
             return;
         }
 
+        System.out.println(ANSI_CYAN+
+                "                                                           ┏┓┏┳┏┓┳┓┏┓┳┏┓┳┏┓┏┓\n" +
+                "                                                           ┣  ┃┣ ┣┫┃ ┃┃ ┃┃┃┗┓\n" +
+                "                                                           ┗┛┗┛┗┛┛┗┗┛┻┗┛┻┗┛┗┛" +
+                "                  "+ANSI_RESET);
+        System.out.println(ANSI_BLUE +
+                "                                  ▄▄   ▄▄▄▄▄  ▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄    ▄ ▄▄▄▄▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄    ▄▄▄    ▄▄  \n" +
+                "                                  ██   █   ▀█   █      █    ██  ██ █        █      █    ▄▀   ▀   ██  \n" +
+                "                                 █  █  █▄▄▄▄▀   █      █    █ ██ █ █▄▄▄▄▄   █      █    █       █  █ \n" +
+                "                                 █▄▄█  █   ▀▄   █      █    █ ▀▀ █ █        █      █    █       █▄▄█ \n" +
+                "                                █    █ █    ▀ ▄▄█▄▄    █    █    █ █▄▄▄▄▄   █    ▄▄█▄▄   ▀▄▄▄▀ █    █\n" +
+                "                                                                      " +
+                "                                                                      "+ANSI_RESET);
+
         System.out.println("Bienvenido a la seccion de ejercicios de aritmetica");
         System.out.println("Por cada ejercicio que resuelvas correctamente sumaras 5 NovaShots");
         System.out.println("En caso de necesitar apoyo, escribe ▶ calculadora ◀ y podrás acceder a ella en cualquier ejercicio");
@@ -306,8 +321,16 @@ public class modulojuego {
             sc.nextLine();
             return;
         }
-
-        System.out.println("Bienvenido a la seccion de ejercicios de regla de tres");
+        System.out.println(ANSI_CYAN+
+                "                                ┏┓┏┳┏┓┳┓┏┓┳┏┓┳┏┓┏┓\n" +
+                "                                ┣  ┃┣ ┣┫┃ ┃┃ ┃┃┃┗┓\n" +
+                "                                ┗┛┗┛┗┛┛┗┗┛┻┗┛┻┗┛┗┛" +
+                "                  "+ANSI_RESET);
+        System.out.println(ANSI_PURPLE+
+                "              .----. .----..---. .-.     .--.     .----. .----.    .---. .----. .----. .----.   \n" +
+                "              | {}  }| {_ /   __}| |    / {} \\    | {}  \\| {_     {_   _}| {}  }| {_  { {__     \n" +
+                "              | .-. \\| {__\\  {_ }| `--./  /\\  \\   |     /| {__      | |  | .-. \\| {__ .-._} }   \n" +
+                "              `-' `-'`----'`---' `----'`-'  `-'   `----' `----'     `-'  `-' `-'`----'`----'    "+ANSI_RESET);
         System.out.println("Por cada ejercicio que resuelvas correctamente sumaras 5 NovaShots");
 
         System.out.println("Escribe 1 si estas listo o 2 para volver");
@@ -452,7 +475,17 @@ public class modulojuego {
                 "Rombo = (32 × 18)/2 = 288.",
                 "Trapecio = (45 + 27)/2 × 20 = 720.",
         };
-        System.out.println("Bienvenido a la seccion de ejercicios de regla de tres");
+        System.out.println(ANSI_CYAN+
+                "                                                              ┏┓┏┳┏┓┳┓┏┓┳┏┓┳┏┓┏┓\n" +
+                "                                                              ┣  ┃┣ ┣┫┃ ┃┃ ┃┃┃┗┓\n" +
+                "                                                              ┗┛┗┛┗┛┛┗┗┛┻┗┛┻┗┛┗┛" +
+                "                  "+ANSI_RESET);
+        System.out.println(ANSI_PURPLE+
+                "  ___   __   __     ___  _  _  __     __     ____  ____     __   ____  ____   __   ____ \n" +
+                " / __) / _\\ (  )   / __)/ )( \\(  )   /  \\   (    \\(  __)   / _\\ (  _ \\(  __) / _\\ / ___)\n" +
+                "( (__ /    \\/ (_/\\( (__ ) \\/ (/ (_/\\(  O )   ) D ( ) _)   /    \\ )   / ) _) /    \\\\___ \\\n" +
+                " \\___)\\_/\\_/\\____/ \\___)\\____/\\____/ \\__/   (____/(____)  \\_/\\_/(__\\_)(____)\\_/\\_/(____/\n"+ANSI_RESET);
+
         System.out.println("Por cada ejercicio que resuelvas correctamente sumaras 5 NovaShots");
 
         System.out.println("Escribe 1 si estas listo o 2 para volver");
@@ -777,9 +810,14 @@ public class modulojuego {
                     if (enemigoActivo[i]) {
                         if (enemigos[i][0] >= Y) {
                             juegoTerminado = true;
-                            System.out.println("Un enemigo llegó a tu orbita.");
-                            System.out.println("Lo siento ╯︿╰ has perdido");
-                            System.out.println("Vuelve a intentarlo pronto");
+                            System.out.println(ANSI_CYAN+
+                                    "                                         __    __   ___ __ _           __ __ _     _    ___       _  _  _ ______ _    \n" +
+                                    "                              | ||\\|   |_ |\\||_ |V| | /__/ \\   |  |  |_ /__/ \\   |_|    | | |   / \\|_)|_) |  | |_|   \n" +
+                                    "                              |_|| |   |__| ||__| |_|_\\_|\\_/   |__|__|__\\_|\\_/   | |    | |_|   \\_/| \\|_)_|_ | | |   \n" +
+                                    "                                     _     _____ __   ___ _                    _  __    _  __ _  _ ___ _  _          \n" +
+                                    "                                 |  / \\   (_  | |_ |\\| | / \\               |_||_|(_    |_)|_ |_)| \\ | | \\/ \\         \n" +
+                                    "                                 |__\\_/   __)_|_|__| | | \\_/    o  o  o    | || |__)   |  |__| \\|_/_|_|_/\\_/         \n" +
+                                    "                                                                                       "+ANSI_RESET);
                             break;
                         }
                     }
@@ -792,9 +830,18 @@ public class modulojuego {
                 System.out.println("¡¡¡MISION EXITOSA!!!");
             }
             while (true) {
-                System.out.println("\n¿A donde quieres viajar?");
-                System.out.println("1. Regresar al menú del juego");
-                System.out.println("2. Salir al menú principal");
+                System.out.println(ANSI_CYAN +
+                        "                                              ╔═════════════════════════════════════════════════╗\n" +
+                        "                                              ║            ¿A DÓNDE QUIERES VIAJAR?:            ║\n" +
+                        "                                              ╠═════════════════════════════════════════════════╣" + ANSI_RESET);
+
+                System.out.println(ANSI_PURPLE +
+                        "                                              ║  1) Regresar al menú del juego                  ║\n" +
+                        "                                              ║  2) Salir al menú principal                     ║" +
+                        ANSI_RESET);
+                System.out.println(ANSI_CYAN +
+                        "                                              ╚═════════════════════════════════════════════════╝" +
+                        ANSI_RESET);
                 System.out.print("Ingresa opción: ");
                 String opf = entrada.nextLine().trim();
                 if (opf.equals("1")) {
