@@ -208,7 +208,11 @@ nova {
                             }
                             contador--;
                         }
-                        System.out.println("Hasta aqui llego nuestra aventura, nos vemos pronto!");
+                        System.out.println(ANSI_PURPLE+
+                                "                     _   ______ _    _   __             ___ __  __            ___ ______ __  _    _      ___   ____     __  _  \n" +
+                                "                )__//_| (   /  /_|  /_| /  )/  /  /  / (_  / _ /  )  /| )/  /(_  (   /  /__)/_|  /_|(  /(_  /| )/  /  //__)/_| \n" +
+                                "               /  /(  |__) (  (  | (  |(__\\(__/  (__(__/__(__)(__/  / |/(__/ /____) (  / ( (  | (  ||_/ /__/ |/(  (__// ( (  | \n" +
+                                "                                                                                                                \n" +ANSI_RESET);
                         System.exit(0);
                         break;
                     default:
