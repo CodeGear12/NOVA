@@ -57,10 +57,15 @@ nova {
         System.out.println(ANSI_BLUE +
                 "                                             ╚═════════════════════════════════════════════════╝" +
                 ANSI_RESET);
+
+
         System.out.println("Ingresa tu nombre:");
-
-
         nombre = sc.nextLine();
+        while (!nombre.matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$")){
+            System.out.println("Nombre invalido");
+            nombre= sc.nextLine();
+        }
+
         System.out.println(ANSI_CYAN +
                 "                                             ╔═════════════════════════════════════════════════╗\n" +
                 "                                             ║                      LOGIN                      ║\n" +
@@ -146,8 +151,9 @@ nova {
         System.out.println("Registro exitoso, presiona ENTER para continuar");
         sc.nextLine();
 
-
     }
+
+
     public static void general() {
         int opc;
 
