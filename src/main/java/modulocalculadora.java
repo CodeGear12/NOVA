@@ -1096,4 +1096,3 @@ public class modulocalculadora {
             System.out.println("El valor de la incognita A es: " + A);
     }
 }
-
