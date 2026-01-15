@@ -185,9 +185,10 @@ public class modulojuego {
                             System.out.println(problemas[i]);
                             String respuesta = sc.nextLine();
                             if (respuesta.equalsIgnoreCase("calculadora")) {
-                                modulocalculadora.gral(true);
+                                modulocalculadora.gral(true); // 1. Sale hacia la calculadora
+                                // 2. AQUÍ REGRESA el 'return' de la calculadora
                                 System.out.println("Regresando al ejercicio.");
-                                continue;
+                                continue; // Salta al inicio del while(!respondido)
                             }
                             if (respuesta.equalsIgnoreCase(respuestascorrectas[i])) {
                                 System.out.println("Correcto +5 Novashots");
