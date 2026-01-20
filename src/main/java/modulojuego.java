@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.*;
 public class modulojuego {
     //modulo juego
@@ -398,7 +397,6 @@ public class modulojuego {
 
                 } else {
                     System.out.println("Error, escribe 1 para comenzar o 2 para volver");
-
                 }
             }else {
                 System.out.println("Error, escribe 1 para comenzar o 2 para volver");
@@ -557,6 +555,7 @@ public class modulojuego {
                 }
             }else {
                 System.out.println("Error, escribe 1 para iniciar o 2 para volver");
+                sc.nextLine();
             }
         }while(true);
     }

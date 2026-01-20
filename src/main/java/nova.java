@@ -59,7 +59,7 @@ nova {
                 ANSI_RESET);
 
 
-        System.out.println("Ingresa tu nombre:");
+        System.out.print("Ingresa tu nombre:");
         nombre = sc.nextLine();
         while (!nombre.matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$")){
             System.out.println("Nombre invalido");
@@ -81,21 +81,20 @@ nova {
                 "                                             ╚═════════════════════════════════════════════════╝" +
                 ANSI_RESET);
         boolean valida = false;
-        System.out.println("Ingresa tu edad:");
+        System.out.print("Ingresa tu edad:");
         while (!valida){
             if (sc.hasNextInt()){
                 edad = sc.nextInt();
-                if (edad > 0 && edad < 110) {
+                if (edad >= 11 && edad <= 18) {
                     valida = true;
-
                 }
                 else {
-                    System.out.println("Ingresa una edad valida");
+                    System.out.print("Ingresa una edad valida:");
                 }
 
             }
             else {
-                System.out.println("Ingresa un numero");
+                System.out.print("Ingresa un numero:");
                 sc.next();
             }
         }
@@ -114,9 +113,17 @@ nova {
         System.out.println(ANSI_BLUE +
                 "                                             ╚═════════════════════════════════════════════════╝" +
                 ANSI_RESET);
+        boolean usuarioValido = false;
+        System.out.print("Crea un usuario (mínimo 8 caracteres):");
+        while(!usuarioValido) {
+            usuario = sc.nextLine();
+            if (usuario.length() >= 8) {
+                usuarioValido = true;
+            } else {
+                System.out.print("El usuario debe tener al menos 8 caracteres:");
+            }
+        }
 
-        System.out.println("Crea un usuario:");
-        usuario = sc.nextLine();
         System.out.println(ANSI_CYAN +
                 "                                             ╔═════════════════════════════════════════════════╗\n" +
                 "                                             ║                      LOGIN                      ║\n" +
@@ -132,8 +139,16 @@ nova {
                 "                                             ╚═════════════════════════════════════════════════╝" +
                 ANSI_RESET);
 
-        System.out.println("Crea una contraseña:");
-        password= sc.nextLine();
+        boolean passValida = false;
+        System.out.print("Crea una contraseña (mínimo 8 caracteres):");
+        while(!passValida) {
+            password = sc.nextLine();
+            if (usuario.length() >= 8) {
+                passValida = true;
+            } else {
+                System.out.print("La contraseña debe tener al menos 8 caracteres:");
+            }
+        }
         System.out.println(ANSI_CYAN +
                 "                                             ╔═════════════════════════════════════════════════╗\n" +
                 "                                             ║                      LOGIN                      ║\n" +
