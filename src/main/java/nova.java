@@ -59,10 +59,10 @@ nova {
                 ANSI_RESET);
 
 
-        System.out.print("Ingresa tu nombre:");
+        System.out.print("Ingresa tu nombre: ");
         nombre = sc.nextLine();
         while (!nombre.matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$")){
-            System.out.println("Nombre invalido");
+            System.out.print("Ingresa un nombre valido: ");
             nombre= sc.nextLine();
         }
 
@@ -72,7 +72,7 @@ nova {
                 "                                             ╠═════════════════════════════════════════════════╣" + ANSI_RESET);
 
         System.out.println(ANSI_PURPLE+
-                "                                                Nombre:"+nombre+                               "\n" +
+                "                                                Nombre: "+nombre+                               "\n" +
                 "                                                Edad:                                           \n" +
                 "                                                Usuario:                                        \n" +
                 "                                                Contraseña:                                     "+
@@ -81,7 +81,7 @@ nova {
                 "                                             ╚═════════════════════════════════════════════════╝" +
                 ANSI_RESET);
         boolean valida = false;
-        System.out.print("Ingresa tu edad:");
+        System.out.print("Ingresa tu edad: ");
         while (!valida){
             if (sc.hasNextInt()){
                 edad = sc.nextInt();
@@ -89,12 +89,12 @@ nova {
                     valida = true;
                 }
                 else {
-                    System.out.print("Ingresa una edad valida:");
+                    System.out.print("Ingresa una edad valida: ");
                 }
 
             }
             else {
-                System.out.print("Ingresa un numero:");
+                System.out.print("Ingresa un numero: ");
                 sc.next();
             }
         }
@@ -105,8 +105,8 @@ nova {
                 "                                             ╠═════════════════════════════════════════════════╣" + ANSI_RESET);
 
         System.out.println(ANSI_PURPLE+
-                "                                                Nombre:"+nombre                              + "\n" +
-                "                                                Edad:"+edad                                 +"  \n" +
+                "                                                Nombre: "+nombre                              + "\n" +
+                "                                                Edad: "+edad                                 +"  \n" +
                 "                                                Usuario:                                        \n" +
                 "                                                Contraseña:                                     "+
                 ANSI_RESET);
@@ -114,13 +114,13 @@ nova {
                 "                                             ╚═════════════════════════════════════════════════╝" +
                 ANSI_RESET);
         boolean usuarioValido = false;
-        System.out.print("Crea un usuario (mínimo 8 caracteres):");
+        System.out.print("Crea un usuario (mínimo 8 caracteres): ");
         while(!usuarioValido) {
             usuario = sc.nextLine();
             if (usuario.length() >= 8) {
                 usuarioValido = true;
             } else {
-                System.out.print("El usuario debe tener al menos 8 caracteres:");
+                System.out.print("El usuario debe tener al menos 8 caracteres: ");
             }
         }
 
@@ -130,9 +130,9 @@ nova {
                 "                                             ╠═════════════════════════════════════════════════╣" + ANSI_RESET);
 
         System.out.println(ANSI_PURPLE+
-                "                                                Nombre:"+nombre                              +" \n" +
-                "                                                Edad:"+edad                                 +"  \n" +
-                "                                                Usuario:"+usuario                           +"  \n" +
+                "                                                Nombre: "+nombre                              +" \n" +
+                "                                                Edad: "+edad                                 +"  \n" +
+                "                                                Usuario: "+usuario                           +"  \n" +
                 "                                                Contraseña:                                     "+
                 ANSI_RESET);
         System.out.println(ANSI_BLUE +
@@ -140,13 +140,13 @@ nova {
                 ANSI_RESET);
 
         boolean passValida = false;
-        System.out.print("Crea una contraseña (mínimo 8 caracteres):");
+        System.out.print("Crea una contraseña (mínimo 8 caracteres): ");
         while(!passValida) {
             password = sc.nextLine();
-            if (usuario.length() >= 8) {
+            if (password.length() >= 8) {
                 passValida = true;
             } else {
-                System.out.print("La contraseña debe tener al menos 8 caracteres:");
+                System.out.print("La contraseña debe tener al menos 8 caracteres: ");
             }
         }
         System.out.println(ANSI_CYAN +
@@ -155,10 +155,10 @@ nova {
                 "                                             ╠═════════════════════════════════════════════════╣" + ANSI_RESET);
 
         System.out.println(ANSI_PURPLE+
-                "                                                Nombre:"+nombre                              +" \n" +
-                "                                                Edad:"+edad                                 +"  \n" +
-                "                                                Usuario:"+usuario                           +"  \n" +
-                "                                                Contraseña:"+password                       +"  "+
+                "                                                Nombre: "+nombre                              +" \n" +
+                "                                                Edad: "+edad                                 +"  \n" +
+                "                                                Usuario: "+usuario                           +"  \n" +
+                "                                                Contraseña: "+password                       +"  "+
                 ANSI_RESET);
         System.out.println(ANSI_BLUE +
                 "                                             ╚═════════════════════════════════════════════════╝" +

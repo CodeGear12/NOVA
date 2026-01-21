@@ -183,6 +183,7 @@ public class modulojuego {
                             System.out.println("Ejercicio " + (i + 1) + ":");
                             System.out.println(problemas[i]);
                             System.out.println("❗Ingresa solo el resultado numerico, no ingreses letras");
+                            System.out.print("Respuesta: ");
                             String respuesta = sc.nextLine();
                             if (respuesta.equalsIgnoreCase("calculadora")) {
                                 modulocalculadora.gral(true); // 1. Sale hacia la calculadora
@@ -346,6 +347,7 @@ public class modulojuego {
                             System.out.println("Ejercicio " + (i + 1) + ":");
                             System.out.println(problemas[i]);
                             System.out.println("❗Ingresa solo el resultado numerico, no ingreses letras");
+                            System.out.print("Respuesta: ");
                             String respuesta = sc.nextLine();
                             if (respuesta.equalsIgnoreCase("calculadora")) {
                                 modulocalculadora.gral(true);
@@ -501,6 +503,7 @@ public class modulojuego {
                             System.out.println("Ejercicio " + (i + 1) + ":");
                             System.out.println(problemas[i]);
                             System.out.println("❗Ingresa solo el resultado numerico, no ingreses letras");
+                            System.out.print("Respuesta: ");
                             String respuesta = sc.nextLine();
                             if (respuesta.equalsIgnoreCase("calculadora")) {
                                 modulocalculadora.gral(true);
